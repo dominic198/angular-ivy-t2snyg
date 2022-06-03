@@ -1,1 +1,12 @@
-<h1>Works</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" formControlName="name">   
+  </p>
+  <div *ngIf="f.name.invalid && f.name.touched && f.name.dirty">
+    <p *ngIf="f.name.errors.required">Name is required</p>
+    <p *ngIf="f.name.errors.minlength">Min required length is {{f.name.errors.minlength.requiredLength}}</p>
+    <p *ngIf="f.name.errors.cannotContanSpaces">Name cannot contain whitespaces</p>
+  </div>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>

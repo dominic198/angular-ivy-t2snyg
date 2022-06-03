@@ -4,8 +4,13 @@ import { ValidationComponent } from "./app/validation/validation.component";
 
 const routes: Routes = [
    {
-     path: 'vallidation',
+     path: 'validation',
      component: ValidationComponent
+   },
+   {
+     path: '',
+     redirectTo: 'validation',
+     pathMatch: 'full'
    }
 ]
 
