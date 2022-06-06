@@ -1,0 +1,19 @@
+p {
+  font-family: Lato;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.purple {
+  background-color: purple;
+  height: 90px;
+  width: 100%;
+}
+
+.red {
+  background-color: red;
+  height: 90px;
+  width: 100%;
+}
