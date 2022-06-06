@@ -3,3 +3,8 @@
   height: 50px;
   background-color: orange;
 }
+
+.header p {
+  display: inline-block;
+  margin-left: 20px;
+}
