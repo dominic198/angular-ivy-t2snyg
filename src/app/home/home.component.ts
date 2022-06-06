@@ -5,9 +5,14 @@ import { AfterViewInit, Component, OnInit, VERSION } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  implements AfterViewInit{
+export class HomeComponent  implements AfterViewInit, OnInit{
 
   ngAfterViewInit(): void {
+    this.sh = "1"
+    this.isChecked = true;
+  }
+
+  ngOnInit() {
     this.sh = "1"
     this.isChecked = true;
   }
