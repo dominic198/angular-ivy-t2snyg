@@ -8,18 +8,19 @@ import { AfterViewInit, Component, OnInit, VERSION } from '@angular/core';
 export class HomeComponent  implements AfterViewInit, OnInit{
 
   name = 'Angular ' + VERSION.major;
-  sh = "1"
-  isChecked = true;
+  sh = "0"
+  isChecked = false;
 
 
   ngAfterViewInit(): void {
+    this.isChecked = false;
     this.sh = "1"
-    this.isChecked = true;
+   
   }
 
   ngOnInit() {
-    this.sh = "1"
-    this.isChecked = true;
+    this.sh = "0"
+    this.isChecked = false;
   }
  
 }
