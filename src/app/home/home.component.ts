@@ -8,12 +8,12 @@ import { AfterViewInit, Component, OnInit, VERSION } from '@angular/core';
 export class HomeComponent  implements AfterViewInit{
 
   ngAfterViewInit(): void {
-    this.sh = "0"
+    this.sh = "1"
     this.isChecked = true;
   }
 
   name = 'Angular ' + VERSION.major;
-  sh = ""
+  sh = "1"
   isChecked = true;
 
 }
