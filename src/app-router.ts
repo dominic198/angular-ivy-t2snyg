@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { CalendarComponent } from "./app/calendar/calendar.component";
+import { HomeComponent } from "./app/home/home.component";
 import { ValidationComponent } from "./app/validation/validation.component";
 
 const routes: Routes = [
@@ -8,8 +10,16 @@ const routes: Routes = [
      component: ValidationComponent
    },
    {
+     path: 'home',
+     component: HomeComponent
+   },
+   {
+     path: 'calendar',
+     component: CalendarComponent
+   },
+   {
      path: '',
-     redirectTo: 'validation',
+     redirectTo: 'home',
      pathMatch: 'full'
    }
 ]
