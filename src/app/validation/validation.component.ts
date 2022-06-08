@@ -26,4 +26,11 @@ export class ValidationComponent implements OnInit {
   onSubmit(){
     console.log(this.myForm.value)
   }
+
+  addControl(){
+    this.myForm.addControl('address', this.fb.group({
+      city: ['chennai',Validators.required],
+      state: ['TamilNadu', Validators.required]
+    }))
+  }
 }

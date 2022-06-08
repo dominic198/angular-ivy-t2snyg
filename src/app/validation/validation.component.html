@@ -9,5 +9,12 @@
     <p *ngIf="f.name.errors.minlength">Min required length is {{f.name.errors.minlength.requiredLength}}</p>
     <p *ngIf="f.name.errors.cannotContanSpaces">Name cannot contain whitespaces</p>
   </div>
+  <div formGroupName="address">
+    <label for="city"></label>
+    <input type="text" id="city" name="city" formControlName="city"/>
+  </div>
+  <button (click)="addControl()">Add Control</button>
+  <br>
+  <br>
   <button type="submit" [disabled]="!myForm.valid">Submit</button>
 </form>
