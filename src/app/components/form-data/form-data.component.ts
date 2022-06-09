@@ -27,7 +27,18 @@ export class FormDataComponent implements OnInit, OnChanges {
   createForm(controls: jsonFormControls[]){
     console.log(controls);
     for(let control of controls){
-       if(control.)
+       if(!control.isGroup){
+         this.myForm.addControl(
+           control.id,
+           this.fb.control(control.Value)
+         )
+       }else if(control.isGroup){
+        this.myForm.addControl(control.id, this.fb.group({}));
+        let ctrl = this.myForm.get('address') as FormGroup;
+        for(let c of control.data){
+          ctrl.addControl(c.id, this.fb.control(control.Value))
+        }
+       }
     }
   }
 
