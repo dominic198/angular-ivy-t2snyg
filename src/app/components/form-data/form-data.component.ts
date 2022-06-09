@@ -40,6 +40,7 @@ export class FormDataComponent implements OnInit, OnChanges {
         }
        }
     }
+    console.log(this.myForm.controls)
   }
 
   onSubmit(){
