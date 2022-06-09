@@ -37,8 +37,8 @@
         "Value": "Male, Female"
     },
    { "isGroup" : true,
-    "ID":"address",
-    "value":[
+    "id":"address",
+    "Value":[
         {
             "id":"Address",
             "Label":"Address",
