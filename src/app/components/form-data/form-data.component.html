@@ -6,6 +6,12 @@
         <label for="control?.id">{{control.Label}}</label>
         <input [type]="control.Type" [formControlName]="control?.id">   
       </div>    
+      <div *ngIf="control.Type === 'radio'">
+      <label for="control?.id">{{control.Label}}</label>
+      <div  *ngFor="let v of control.Value.trim().split(',')">
+        <input [type]="control.Type" [formControlName]="control?.id"> {{v}}
+      </div>        
+    </div> 
     </div>
   </div>
 </form>
