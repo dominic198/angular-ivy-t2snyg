@@ -36,7 +36,7 @@ export class FormDataComponent implements OnInit, OnChanges {
         this.myForm.addControl(control.id, this.fb.group({}));
         let ctrl = this.myForm.get('address') as FormGroup;
         for(let c of control.data){
-          ctrl.addControl(c.id, this.fb.control(control.Value))
+          ctrl.addControl(c.id, this.fb.control(c.Value))
         }
        }
     }
