@@ -3,8 +3,8 @@
   <div *ngFor="let control of formData.controls">
     <div *ngIf="!control.isGroup">      
        <label for="control?.id">{{control.Label}}</label>
-       <input type="control.Type">      
-       {{control.id}}
+       <input type="control.Type" formControlName="control.id">       
     </div>
   </div>
 </form>
+{{myForm.value | json}}
