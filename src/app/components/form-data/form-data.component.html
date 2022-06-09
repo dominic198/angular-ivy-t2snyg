@@ -12,7 +12,7 @@
         </div>
       </div>
       <div *ngIf="control.isGroup" formGroupName="control.id">
-        <div *ngFor="let ctrl of control.value">
+        <div *ngFor="let ctrl of control.Value">
           <div *ngIf="ctrl.Type != 'radio'">
             <label for="ctrl?.id">{{ctrl.Label}}</label>
             <input [type]="ctrl.Type" [formControlName]="ctrl?.id">
