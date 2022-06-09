@@ -17,6 +17,24 @@
       "Label": "Mobile Number",
       "Type": "input",
       "Value": ""
+    },
+    {
+      "id": "EmailId",
+      "Label": "Email id",
+      "Type": "input",
+      "Value": ""
+    },
+    {
+      "id": "DOB",
+      "Label": "DOB",
+      "Type": "date",
+      "Value": ""
+    },
+    {
+      "id": "Gender",
+      "Label": "Gender",
+      "Type": "radio",
+      "Value": "Male, Female"
     }
   ]
 }
