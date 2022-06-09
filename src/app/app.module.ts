@@ -10,9 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HeaderComponent } from './header/header.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRouter, ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule, AppRouter, ReactiveFormsModule, HttpClientModule ],
   declarations: [ AppComponent, 
     HelloComponent, 
     ValidationComponent,
