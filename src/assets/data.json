@@ -1,0 +1,70 @@
+{
+  "controls": [
+    {
+      "id": "FirstName",
+      "Label": "First Name",
+      "Type": "input",
+      "Value": ""
+    },
+    {
+      "id": "LastName",
+      "Label": "Last Name",
+      "Type": "input",
+      "Value": ""
+    },
+    {
+      "id": "MobileNo",
+      "Label": "Mobile Number",
+      "Type": "input",
+      "Value": ""
+    },
+    {
+      "id": "Email id",
+      "Label": "Email id",
+      "Type": "input",
+      "Value": ""
+    },
+    {
+      "id": "DOB",
+      "Label": "DOB",
+      "Type": "date",
+      "Value": ""
+    },
+    {
+      "id": "Gender",
+      "Label": "Gender",
+      "Type": "radio",
+      "Value": "Male, Female"
+    },
+    {
+      "isGroup": true,
+      "ID": "address",
+      "value": [
+        {
+          "id": "Address",
+          "Label": "Address",
+          "Type": "input",
+          "Value": ""
+        },
+        {
+          "id": "City",
+          "Label": "City",
+          "Type": "select",
+          "Value": "Mumbai,Chennai,Delhi,Bangalore,Gujarat,Lucknow,Kochi,Hyderbad,Rajasthan,Kolkata"
+        },
+        {
+          "id": "State",
+          "Label": "State",
+          "Type": "select",
+          "Value": "TamilNadu,Kerala,Karnataka,Telegana,Maharashtra,Delhi,Kolkata,Bihar,Jharkhand,Nepal"
+        },
+        {
+          "id": "Pincode",
+          "Label": "Pincode",
+          "Type": "input",
+          "Value": ""
+        }
+      ]
+    }
+  ]
+}
