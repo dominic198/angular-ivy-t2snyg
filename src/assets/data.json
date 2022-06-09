@@ -19,7 +19,7 @@
       "Value": ""
     },
     {
-      "id": "Email id",
+      "id": "EmailId",
       "Label": "Email id",
       "Type": "input",
       "Value": ""
@@ -38,8 +38,8 @@
     },
     {
       "isGroup": true,
-      "ID": "address",
-      "value": [
+      "id": "address",
+      "data": [
         {
           "id": "Address",
           "Label": "Address",

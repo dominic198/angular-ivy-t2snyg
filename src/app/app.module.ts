@@ -11,6 +11,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { HeaderComponent } from './header/header.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormDataComponent } from './components/form-data/form-data.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouter, ReactiveFormsModule, HttpClientModule ],
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CalendarComponent,
     HeaderComponent,
-    DynamicComponent
+    DynamicComponent,
+    FormDataComponent
   ],
   bootstrap:    [ AppComponent ]
 })

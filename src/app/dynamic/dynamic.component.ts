@@ -1,6 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+interface dataVal {
+  id: string;
+  Label: string;
+  Type: string;
+  Value: string;
+}
+
+export interface jsonFormControls {
+  id: string;
+  Label?: string;
+  Type?: string;
+  Value?: string;
+  data?: dataVal []
+}
+
+export interface jsonFormData {
+  controls: jsonFormControls[]
+}
+
 @Component({
   selector: 'app-dynamic',
   templateUrl: './dynamic.component.html',
@@ -10,10 +29,14 @@ export class DynamicComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  public formData: jsonFormData = {
+    controls: []
+  }
+
   ngOnInit() {
     this.http.get('/assets/data.json')
-    .subscribe((data:any) => {
-      console.log(data);
+    .subscribe((data: jsonFormData) => {
+      this.formData = data;
     })
   }
 
