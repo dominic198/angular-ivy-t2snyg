@@ -13,7 +13,8 @@ export interface jsonFormControls {
   Label?: string;
   Type?: string;
   Value?: string;
-  data?: dataVal []
+  data?: dataVal [],
+  isGroup: boolean,
 }
 
 export interface jsonFormData {

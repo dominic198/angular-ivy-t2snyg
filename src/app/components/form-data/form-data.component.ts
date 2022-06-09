@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges, ChangeDetectionStrategy, SimpleChanges } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { jsonFormControls, jsonFormData } from '../../dynamic/dynamic.component';
 
 @Component({
@@ -11,7 +12,8 @@ export class FormDataComponent implements OnInit, OnChanges {
 
   @Input() formData : jsonFormData;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
+  public myForm: FormGroup = this.fb.group({});
 
   ngOnInit() {
   }
@@ -23,7 +25,10 @@ export class FormDataComponent implements OnInit, OnChanges {
   }
 
   createForm(controls: jsonFormControls[]){
-    console.log(controls)
+    console.log(controls);
+    for(let control of controls){
+       if(control.)
+    }
   }
 
 }
