@@ -1,3 +1,4 @@
+{{myForm.value | json}}
 <form [formGroup]="myForm" (ngSumbit)="onSubmit()">
   <div *ngFor="let control of formData.controls">
     <div *ngIf="!control.isGroup">
@@ -12,7 +13,7 @@
         </div>
       </div>
       <div *ngIf="control.isGroup" formGroupName="control.id">
-        <div *ngFor="let ctrl of control.Value">
+        <div *ngFor="let ctrl of control.data">          
           <div *ngIf="ctrl.Type != 'radio'">
             <label for="ctrl?.id">{{ctrl.Label}}</label>
             <input [type]="ctrl.Type" [formControlName]="ctrl?.id">
@@ -22,4 +23,3 @@
     </div>
   </div>
 </form>
-{{myForm.value | json}}

@@ -38,7 +38,7 @@
     },
    { "isGroup" : true,
     "id":"address",
-    "Value":[
+    "data":[
         {
             "id":"Address",
             "Label":"Address",
