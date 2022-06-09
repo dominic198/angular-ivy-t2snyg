@@ -1,17 +1,24 @@
-
 <form [formGroup]="myForm" (ngSumbit)="onSubmit()">
   <div *ngFor="let control of formData.controls">
-    <div *ngIf="!control.isGroup">      
+    <div *ngIf="!control.isGroup">
       <div *ngIf="control.Type != 'radio'">
         <label for="control?.id">{{control.Label}}</label>
-        <input [type]="control.Type" [formControlName]="control?.id">   
-      </div>    
+        <input [type]="control.Type" [formControlName]="control?.id">
+      </div>
       <div *ngIf="control.Type === 'radio'">
-      <label for="control?.id">{{control.Label}}</label>
-      <div  *ngFor="let v of control.Value.trim().split(',')">
-        <input [type]="control.Type" [formControlName]="control?.id"> {{v}}
-      </div>        
-    </div> 
+        <label for="control?.id">{{control.Label}}</label>
+        <div *ngFor="let v of control.Value.trim().split(',')">
+          <input [type]="control.Type" [formControlName]="control?.id"> {{v}}
+        </div>
+      </div>
+      <div *ngIf="control.isGroup" formGroupName="control.id">
+        <div *ngFor="let ctrl of control.value">
+          <div *ngIf="ctrl.Type != 'radio'">
+            <label for="ctrl?.id">{{ctrl.Label}}</label>
+            <input [type]="ctrl.Type" [formControlName]="ctrl?.id">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </form>
