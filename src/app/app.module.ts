@@ -9,6 +9,7 @@ import { AppRouter } from '../app-router';
 import { HomeComponent } from './home/home.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HeaderComponent } from './header/header.component';
+import { DynamicComponent } from './dynamic/dynamic.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouter, ReactiveFormsModule ],
@@ -17,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
     ValidationComponent,
     HomeComponent,
     CalendarComponent,
-    HeaderComponent
+    HeaderComponent,
+    DynamicComponent
   ],
   bootstrap:    [ AppComponent ]
 })
