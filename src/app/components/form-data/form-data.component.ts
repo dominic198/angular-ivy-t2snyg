@@ -42,4 +42,8 @@ export class FormDataComponent implements OnInit, OnChanges {
     }
   }
 
+  onSubmit(){
+    console.log(this.myForm.value)
+  }
+
 }
