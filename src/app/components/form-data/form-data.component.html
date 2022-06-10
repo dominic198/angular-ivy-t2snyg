@@ -1,31 +1,33 @@
-
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="width: 80%; margin: auto; margin-top: 20px">
   <div *ngFor="let control of formData.controls">
     <div *ngIf="!control.isGroup">
-      <div *ngIf="control.Type != 'radio'">
-        <label for="control?.id">{{control.Label}}</label>
-        <input [type]="control.Type" [formControlName]="control?.id">
+      <div *ngIf="control.Type != 'radio'" class="form-group">
+        <label for="control?.id">{{ control.Label }}</label>
+        <input [type]="control.Type" [formControlName]="control?.id" class="form-control"/>
       </div>
-      <div *ngIf="control.Type === 'radio'">
-        <label for="control?.id">{{control.Label}}</label>
-        <div *ngFor="let v of control.Value.trim().split(',')">
-          <input [type]="control.Type" [formControlName]="control?.id"> {{v}}
+      <div *ngIf="control.Type === 'radio'"  class="form-check">
+        <label for="control?.id" class="form-check-label">{{ control.Label }}</label>
+        <div *ngFor="let v of control.Value.trim().split(',')" style="display: flex; flexDirection: row">
+          <input type="radio" [value]="v" [formControlName]="control?.id" class="form-check-input"> {{v}}
         </div>
-      </div>      
-    </div>
-    <div *ngIf="control.isGroup" [formGroupName]="control.id">    
-    <div *ngFor="let ctrl of control.data">          
-      <div *ngIf="ctrl.Type != 'radio'">
-        <label for="ctrl?.id">{{ctrl.Label}}</label>
-        <input [type]="ctrl.Type" [formControlName]="ctrl?.id">
       </div>
-      <div *ngIf="control.Type == 'select'">
-      <label for="control?.id">{{control.Label}}</label>
-      <input [type]="control.Type" [formControlName]="control?.id">
     </div>
+    <div *ngIf="control.isGroup" [formGroupName]="control.id">
+      <div *ngFor="let ctrl of control.data">        
+        <div *ngIf="ctrl.Type === 'select'">
+          <label for="ctrl?.id">{{ ctrl.Label }}</label>
+          <select [formControlName]="ctrl.id" class="form-select">
+            <option [value]="v" [selected]="ctrl.Value.trim().split(',').sort()[0]" *ngFor="let v of ctrl.Value.trim().split(',')"> {{v}}</option>
+          </select>
+        </div>
+        <div *ngIf="ctrl.Type != 'select'" class="form-group">
+        <label for="ctrl?.id">{{ ctrl.Label }}</label>
+        <input [type]="ctrl.Type" [formControlName]="ctrl?.id" class="form-control"/>
+      </div>
+      </div>
     </div>
   </div>
-  </div>
-  <button type="submit">Submit</button>
+  <br>
+  <button [type]="'submit'" class="btn btn-primary btn-lg">Submit</button>
 </form>
-{{myForm.value | json}}
+<!-- {{ myForm.value | json }} -->

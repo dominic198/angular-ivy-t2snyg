@@ -34,7 +34,7 @@
         "id":"Gender",
         "Label":"Gender",
         "Type": "radio",
-        "Value": "Male, Female"
+        "Value": "Male, Female, Other"
     },
    { "isGroup" : true,
     "id":"address",
