@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ChangeDetectionComponent implements OnInit {
 
   constructor() { }
-  public fruits = ['apple','orange', 'cherry'];
+  public fruits: string[] = ['apple','orange', 'cherry'];
   ngOnInit() {
+  }
+
+  addFruit(fruit:string){
+    this.fruits.push(fruit)
   }
 
 }

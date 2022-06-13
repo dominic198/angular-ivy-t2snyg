@@ -1,1 +1,8 @@
+<div class="container mt-5">
 <app-list [fruitList]="fruits"></app-list>
+<br>
+<input type="text" #fruit >
+<br>
+<br>
+<button class="btn btn-danger" (click)="addFruit(fruit.value);fruit.value = ''">Add a Fruit</button>
+</div>
