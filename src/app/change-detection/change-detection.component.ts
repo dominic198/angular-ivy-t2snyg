@@ -13,7 +13,7 @@ export class ChangeDetectionComponent implements OnInit {
   }
 
   addFruit(fruit:string){
-    this.fruits.push(fruit)
+    this.fruits = [...this.fruits,fruit]
   }
 
 }
