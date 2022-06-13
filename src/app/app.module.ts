@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormDataComponent } from './components/form-data/form-data.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouter, ReactiveFormsModule, HttpClientModule ],
@@ -22,7 +23,8 @@ import { FormDataComponent } from './components/form-data/form-data.component';
     CalendarComponent,
     HeaderComponent,
     DynamicComponent,
-    FormDataComponent
+    FormDataComponent,
+    ChangeDetectionComponent
   ],
   bootstrap:    [ AppComponent ]
 })

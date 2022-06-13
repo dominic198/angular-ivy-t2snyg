@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CalendarComponent } from "./app/calendar/calendar.component";
+import { ChangeDetectionComponent } from "./app/change-detection/change-detection.component";
 import { DynamicComponent } from "./app/dynamic/dynamic.component";
 import { HomeComponent } from "./app/home/home.component";
 import { ValidationComponent } from "./app/validation/validation.component";
@@ -21,6 +22,10 @@ const routes: Routes = [
    {
      path: 'dynamic',
      component: DynamicComponent
+   },
+   {
+     path: 'change',
+     component: ChangeDetectionComponent
    },
    {
      path: '',
