@@ -1,6 +1,6 @@
 <ul>
-  <li *ngFor="let fruit of fruitList;">
+  <li *ngFor="let fruit of fruitList; let i = index">
     {{ fruit }}
-    <button class="btn btn-success" style="border-radius: 10">X</button>
+    <button class="btn btn-success" (click)="remove(i)">X</button>
   </li>
 </ul>

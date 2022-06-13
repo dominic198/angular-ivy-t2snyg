@@ -13,4 +13,8 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
+  remove(i:number){
+    this.fruitList.splice(i,1);
+  }
+
 }
