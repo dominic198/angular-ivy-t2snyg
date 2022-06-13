@@ -13,6 +13,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormDataComponent } from './components/form-data/form-data.component';
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouter, ReactiveFormsModule, HttpClientModule ],
@@ -24,7 +25,8 @@ import { ChangeDetectionComponent } from './change-detection/change-detection.co
     HeaderComponent,
     DynamicComponent,
     FormDataComponent,
-    ChangeDetectionComponent
+    ChangeDetectionComponent,
+    ListComponent
   ],
   bootstrap:    [ AppComponent ]
 })
